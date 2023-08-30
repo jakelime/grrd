@@ -1,0 +1,78 @@
+[general]
+recipe_name = "factory_defaults"
+grr_config_csv_filepath = "dummy" # will be overwritten in code
+system_working_dir = "/Users/jli8/Downloads"
+
+
+[input_settings]
+file_format = "csv"
+
+[input_settings.reading_format.data]
+skip_rows = [0, 2, 3, 4]
+
+[input_settings.reading_format.grr_config_csv]
+skip_rows = [0, 2]
+# FOM = "GRRConfig" # for Renpeng's GaiaStat GrrConfig file
+FOM = "GrrConfig" # for Meijun's GaiaStat GrrConfig file
+GRR_LIMIT = "GRR Limit----->"
+
+[input_settings.reading_format.headers]
+header_row = 1
+nrows = 3
+
+[input_settings.variable_names]
+# In this configuration, each column is a FOM parameteric
+# except for these columns below which are descriptive
+REP = "rep"
+VALUE = "value"
+OPERATOR = "TesterID"
+PART = "SerialNumber"
+TIMESTAMP = "timeStamp"
+USL = "Upper Limit ----->"
+LSL = "Lower Limit ----->"
+UNITS = "Measurement Unit ----->"
+
+
+[grr_settings]
+
+version_description = "factory_grr_limits"
+version = "0.0.1"
+drop_foms_without_test_specs = true
+drop_foms_without_grr_specs = false
+
+list_of_foms = [
+    # "LEDT::Vf400uA_mV",
+    # "LEDT::Vf30mA_mV",
+    # "LEDT::RadiatedPower_400uA_mW",
+    # "LEDT::RadiatedPower_30mA_mW",
+    # "LEDT::FWHM_400uA_nm",
+    # "LEDT::FWHM_30mA_nm",
+] # empty list to run all FOMs
+list_of_excluded_foms = [
+    "SerialNumber",
+    "Test Pass/Fail Status",
+    "errCode",
+    "errStr",
+    "TesterID",
+    "config",
+    "timeStamp",
+    "StartTime",
+    "EndTime",
+    "TestTime",
+    "Failing Items",
+    "INIT::MODULE_SN",
+    "INIT::TesterID",
+    "INIT::TSTR_SW",
+    "INIT::TSTR_HW",
+    "INIT::LOT_NAME",
+    "INIT::HNDLR_ID",
+    "INIT::A_TEST_TIME",
+    "INIT::B_TEST_TIME",
+    "INIT::C_TEST_TIME",
+    "LEDT::PowerMeterSN",
+    "LEDT::correctionFactor_4mA",
+    "LEDT::intercept_4mA",
+    "LEDT::correctionFactor_30mA",
+    "LEDT::intercept_30mA",
+]
+
