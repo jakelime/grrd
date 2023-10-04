@@ -13,7 +13,9 @@ pip install -r requirements.txt
 python grrd/main.py
 ```
 
-After starting the server, go to http://127.0.0.1:8051/grrd/
+After running the command from your `terminal`, your dashboard server is running.
+
+Using your webrowser, go to http://127.0.0.1:8051/grrd/ to use the dashboard app
 
 ## Notes
 
