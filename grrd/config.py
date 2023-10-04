@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 from typing import Mapping
 from utils import setup_logger
 
-APP_NAME = "gaia"
+APP_NAME = "grrd"
 
 
 class Config:

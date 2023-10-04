@@ -16,7 +16,7 @@ import utils
 import models
 from config import Config
 
-APP_NAME = "gaia"
+APP_NAME = "grrd"
 PART = "SerialNumber"  # CRITICAL to be fixed! make this a variable instead..
 log = utils.setup_logger(APP_NAME)
 
@@ -272,14 +272,14 @@ def run_plotly(df: pd.DataFrame, port: str = "8501") -> None:
     app = Dash(
         APP_NAME,
         external_stylesheets=external_stylesheets,
-        routes_pathname_prefix="/gaiaweb/",
-        requests_pathname_prefix="/gaiaweb/",
+        routes_pathname_prefix="/grrd/",
+        requests_pathname_prefix="/grrd/",
     )
     operators = list(df["operator"].unique())
     foms = list(df["fom"].unique())
     app.layout = html.Div(
         [
-            html.H4("Interactive scatter plot with Gaia Data"),
+            html.H4("GR&R Dashboard App"),
             dcc.Graph(id="scatter-plot"),
             html.P("Filter by FOM"),
             dcc.Dropdown(id="foms-dropdown", options=foms, value=foms[0]),
@@ -404,13 +404,12 @@ def main():
     cfg = Config().cfg
     specs = models.SpecsParser(
         cfg=cfg,
-        filepath="/Users/jli8/activedir/gaiaweb/resources/gaia_config.csv",
+        filepath="/Users/jli8/activedir/grrd/resources/gaia_config.csv",
     )
     data = models.StandardParser(
         cfg=cfg,
         filepaths=[
-            # "/Users/jli8/activedir/gaiaweb/resources/sample_files/project0-disco3-original-target.csv"
-            "/Users/jli8/activedir/gaiaweb/resources/sample_files/samplecsv-cleaned_gaia.csv"
+            "/Users/jli8/activedir/grrd/resources/sample_files/samplecsv-cleaned_gaia.csv"
         ],
     )
     plot_data = GaiaDataMaker(cfg=cfg, dataparam_list=data.datastore, dflimits=specs.df)

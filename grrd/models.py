@@ -14,7 +14,7 @@ from config import Config
 import utils
 from utils import get_time
 
-APP_NAME = "gaia"
+APP_NAME = "grrd"
 pd.options.mode.chained_assignment = None  # type: ignore
 
 
@@ -223,7 +223,6 @@ class DataParser(ABC):
     def export_data(
         self, outdir: Optional[Path] = None, outname: str = "exported.csv"
     ) -> None:
-
         if not outdir:
             outdir = self.cfg["general"]["system_working_dir"]
         outname, filetype = outname.split(".")
@@ -308,22 +307,16 @@ class StandardParser(DataParser):
 
 
 def main():
+    # Not working now
     cfg = Config().cfg
-    specs_file = "/Users/jli8/activedir/gaiaweb/resources/grrConfig.csv"
-    target_file = "/Users/jli8/activedir/gaiaweb/resources/project1-di-cleaned.csv"
-    # target_file = "/Users/jli8/activedir/gaiaweb/resources/project2-sh-cleaned.csv"
+    specs_file = "/Users/jli8/activedir/grrd/resources/grrConfig.csv"
+    target_file = "/Users/jli8/activedir/grrd/resources/project1-di-cleaned.csv"
     cfg["general"]["grr_config_csv_filepath"] = specs_file
     specs = SpecsParser(
         cfg=cfg,
         filepath=specs_file,
     )
     data = StandardParser(cfg=cfg, filepaths=[target_file])
-    # plot_data = views.GaiaDataMaker(
-    #     cfg=cfg,
-    #     dataparam_list=data.datastore,
-    #     dflimits=specs.df,
-    # )
-    # views.run_plotly(plot_data.dfs, port=str(PORT))
 
 
 if __name__ == "__main__":

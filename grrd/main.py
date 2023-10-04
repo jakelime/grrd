@@ -6,7 +6,7 @@ import views
 import models
 import platform
 
-APP_NAME = "gaia"
+APP_NAME = "grrd"
 
 
 def start_flask_error_dev(
@@ -49,7 +49,7 @@ def start_flask_error_server(
         return error_template
 
     app = Flask(APP_NAME)
-    app.register_blueprint(bp, url_prefix="/gaiaweb")
+    app.register_blueprint(bp, url_prefix="/grrd")
     app.run(host="0.0.0.0", port=port)
 
 

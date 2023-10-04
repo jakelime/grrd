@@ -7,7 +7,7 @@ from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
 
-APP_NAME = "gaia"
+APP_NAME = "grrd"
 
 
 class ConfigError(ValueError):
