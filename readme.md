@@ -45,7 +45,6 @@ After starting the server, go to http://127.0.0.1:8051/grrd/
 (venv) ➜  grrdash git:(main) which pip
 /Users/jakelim/SynologyDrive/cloud-active_project/grrdash/venv/bin/pip
 
-
 pip install tomlkit
 pip install python-dotenv
 pip install numpy
@@ -53,6 +52,5 @@ pip install pandas
 pip install plotly
 pip install dash
 
-# (py311) ➜  grrdash git:(main) pip install -r requirements.txt
 ```
 
