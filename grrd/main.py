@@ -56,15 +56,10 @@ def start_flask_error_server(
 def load_filepaths() -> tuple[Mapping, str, str]:
     """initialises the cfg and filepath variables by based on machines"""
     cfg = config.Config().cfg
-    match platform.system():
-        case "Darwin":
-            path = "/Users/jli8/activedir/gaiaweb/targetdir"
-        case "Linux":
-            path = "/usr/share/nginx/djangoServerRoot/static/gaiaweb"
-        case _:
-            raise NotImplementedError("load_filepath()")
 
-    user_dir = Path(path)
+    cwd = Path(__file__).parent.parent
+    user_dir = cwd / "targetdir"
+    
     if not user_dir.is_dir():
         raise RuntimeError(f"unable to load {user_dir=}")
 
