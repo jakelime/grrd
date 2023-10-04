@@ -10,7 +10,6 @@ Web app can be served from a server.
 ```bash
 git clone git@github.com:jakelime/grrd.git
 pip install -r requirements.txt
-cd grrd
 python grrd/main.py
 ```
 
