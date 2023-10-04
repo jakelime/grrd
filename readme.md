@@ -3,23 +3,30 @@
 
 ## Information
 
-A tool to process test data to do GR&R easily.
-Web app can be served from a Linux server
+A tool to process test data to perform GR&R easily.
+Web app can be served from a server.
 
 ## Quickstart
 
 ``` bash
-git clone git@gittf.ams-osram.info:os-opto-dev/source-codes/gaiaweb.git
+git clone git@github.com:jakelime/grrd.git
 pip install -r requirements.txt
 cd grrd
 python grrd/main.py
 ```
 
-After starting the server, go to http://127.0.0.1:8051/gaiaweb
+After starting the server, go to http://127.0.0.1:8051/grrd/
 
 
+## Notes
 
-## Best practices: Create a new environment from scratch
+- By default, this app is configured to be deployed using a subdomain `server.com/grrd/`
+- This is facilitate deployment from using `nginx`, which you can simply configure directive for `/grrd`
+
+
+## Miscellaneous
+
+### Create a new environment from scratch
 ``` bash
 (base) ➜  grrdash git:(main) conda create -n py311 python=3.11
 (base) ➜  grrdash git:(main) conda activate py311
