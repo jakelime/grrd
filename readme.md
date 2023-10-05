@@ -46,7 +46,7 @@ DUT into statistical values (mean, std, range), breakdown by operators and creat
 
 The invidual plot of will have data visual presentation of all the essential details
 
-- GR&R specs limits
+- GR&R specs limits to determine GR&R pass or fail
 - Production specs limits
 - `Y vs X` of mean values `Operator_A vs Operator_Golden`
 - Error bars signifying the range of each `PART`
