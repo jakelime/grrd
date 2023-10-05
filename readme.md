@@ -16,14 +16,23 @@ python grrd/main.py
 After running the command from your `terminal`, your dashboard server is running.
 
 Endpoints:
-- Using your webrowser on local machine(server), go to `http://127.0.0.1:8051/grrd/` to use the dashboard app
-- Using your webrowser on local machine(server), go to `http://0.0.0.0:8051/grrd/` -> This is to check if it works on your public facing ip-address
-- Using a webbrowser on another machine(client), got to `http://X.X.X.X:8051/grrd/`, where `X.X.X.X` is the ip-address of the server
+
+- Using your webbrowser on local machine (server), go to `http://127.0.0.1:8051/grrd/` to use the dashboard app
+- On local machine (server), go to `http://0.0.0.0:8051/grrd/` -> This is to check if it works on your public facing ip-address
+- Using a webbrowser on another machine (client), got to `http://X.X.X.X:8051/grrd/`, where `X.X.X.X` is the ip-address of the server
 
 ## Notes
 
 - By default, this app is configured to be deployed using a subdomain `server.com/grrd/`
 - This is facilitate deployment from using `nginx`, which you can simply configure directive for `/grrd`
+
+## Math
+
+For GR&R, we can use the MSA method which is defined by AIAG for the automotive industry
+
+- https://www.aiag.org/quality/automotive-core-tools/msa
+- https://www.spcforexcel.com/knowledge/measurement-systems-analysis/anova-gage-rr-part-1
+- https://www.spcforexcel.com/knowledge/measurement-systems-analysis/anova-gage-rr-part-2
 
 ## Miscellaneous
 
