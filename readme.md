@@ -15,7 +15,10 @@ python grrd/main.py
 
 After running the command from your `terminal`, your dashboard server is running.
 
-Using your webrowser, go to http://127.0.0.1:8051/grrd/ to use the dashboard app
+Endpoints:
+- Using your webrowser on local machine(server), go to `http://127.0.0.1:8051/grrd/` to use the dashboard app
+- Using your webrowser on local machine(server), go to `http://0.0.0.0:8051/grrd/` -> This is to check if it works on your public facing ip-address
+- Using a webbrowser on another machine(client), got to `http://X.X.X.X:8051/grrd/`, where `X.X.X.X` is the ip-address of the server
 
 ## Notes
 
