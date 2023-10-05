@@ -53,6 +53,8 @@ The invidual plot of will have data visual presentation of all the essential det
 - Correlation between the `Operator_A` and `Operator_Golden`, i.e. is
   `Operator_A` consistently poorer?
 
+[Screenshot of webapp](images/screenshot01.png)
+
 ## Miscellaneous
 
 ### Create a new environment from scratch
