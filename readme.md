@@ -34,6 +34,25 @@ For GR&R, we can use the MSA method which is defined by AIAG for the automotive 
 - https://www.spcforexcel.com/knowledge/measurement-systems-analysis/anova-gage-rr-part-1
 - https://www.spcforexcel.com/knowledge/measurement-systems-analysis/anova-gage-rr-part-2
 
+In GR&R, we are concerned with the variations of
+
+- PARTS
+- OPERATORS
+- PARTS \* OPERATORS
+
+In this customised implementation, we compile multiple (repeated tests) measurements on the same
+DUT into statistical values (mean, std, range), breakdown by operators and create an interactive
+`Operator_A vs Operator_Golden` plots for all operators.
+
+The invidual plot of will have data visual presentation of all the essential details
+
+- GR&R specs limits
+- Production specs limits
+- `Y vs X` of mean values `Operator_A vs Operator_Golden`
+- Error bars signifying the range of each `PART`
+- Correlation between the `Operator_A` and `Operator_Golden`, i.e. is
+  `Operator_A` consistently poorer?
+
 ## Miscellaneous
 
 ### Create a new environment from scratch
